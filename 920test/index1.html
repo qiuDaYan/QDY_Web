@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS基础知识</title>
+</head>
+
+<body>
+
+    <div class="main">
+        <ul class="nav">
+            <li>
+                <a href="">
+                    <div><img src="" alt=""><span>这是第1个li</span></div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <div><img src="" alt=""><span>这是第2个li</span></div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <div><img src="" alt=""><span>这是第3个li</span></div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <div><img src="" alt=""><span>这是第4个li</span></div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <div><img src="" alt=""><span>这是第5个li</span></div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <div><img src="" alt=""><span>这是第6个li</span></div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <div><img src="" alt=""><span>这是第7个li</span></div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <div><img src="" alt=""><span>这是第8个li</span></div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <div><img src="" alt=""><span>这是第9个li</span></div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <div><img src="" alt=""><span>这是第10个li</span></div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <div><img src="" alt=""><span>这是第11个li</span></div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <div><img src="" alt=""><span>这是第12个li</span></div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <div><img src="" alt=""><span>这是第13个li</span></div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <div><img src="" alt=""><span>这是第14个li</span></div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <div><img src="" alt=""><span>这是第15个li</span></div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <div><img src="" alt=""><span>这是第16个li</span></div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <div><img src="" alt=""><span>这是第17个li</span></div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <div><img src="" alt=""><span>这是第18个li</span></div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <div><img src="" alt=""><span>这是第19个li</span></div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <div><img src="" alt=""><span>这是第20个li</span></div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        var str = 'helloWorld'
+        var num = 18;
+        if (num > 10) {
+            console.log('数值大于10');
+        } else {
+            console.log('数值小鱼10');
+        }
+        console.log(str);
+        // 在实际使用时,尽量使用switch
+        // switch (num) { // case 10: // console.log(对了); // break; // default: // console.log(错了); // }
+
+
+        console.group('for循环的内容');
+        console.time('for循环的内容');
+
+        for (var i = 0; i < 50; i++)
+        {
+            console.log(`当前i的值为:${i}`);
+            console.count("for循环次数");
+        }
+        console.timeEnd('时间是');
+        console.groupEnd();
+        /*
+        以树形的形式输出内容信息
+         */
+        console.dir(document.querySelectorAll('.main'));
+// 以xml的格式输出
+//
+        console.xmldir(document.querySelectorAll('.main'));
+
+    </script>
+    <!--
+srcipt 的作用原理,把js文件内容加载 目的是说明,如果在srcipt中src了一个js文件,那么里面的东西会覆盖这个页面写的
+-->
+    <script src="js/index.js"></script>
+    <script>
+        console.log('这里是html中的代码');
+        console.log(str);
+    </script>
+</body>
+
+</html>
