@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>增加英雄</title>
+</head>
+<body>
+<form class=""  method="get">
+
+<ul>
+  <li>HeroID:<input type="text" name="heroID" placeholder='1'></li>
+  <li>HeroName:<input type="text" name="HeroName"></li>
+  <li>HeroImage:<input type="text" name="HeroImage"></li>
+  <li>SkillQ:<input type="text" name="SkillQ"></li>
+  <li>SkillW:<input type="text" name="SkillW"></li>
+  <li>SkillE:<input type="text" name="SkillE"></li>
+  <li>SkillR:<input type="text" name="SkillR"></li>
+  <li>Postion:
+    <select name="Position" id="Position" >
+      <option value="0">请选择</option>
+      <option value="法师AP">法师AP</option>
+      <option value="射手AD">射手AD</option>
+      <option value="战士">战士</option>
+      <option value="坦克">坦克</option>
+      <option value="辅助">辅助</option>
+      <option value="上单">上单</option>
+    </select>
+  </li>
+  <li>
+    <a href="list.html">
+      <button type="button" name="button" onclick="dosubmit(event)">添加</button>
+    </li>
+    </a>
+</ul>
+</form>
+<script src="js/editor.js" charset="utf-8"></script>
+</body>
+</html>

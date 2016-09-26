@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>列表页</title>
+    <link rel="stylesheet" href="css/list.css" media="screen" title="no title">
+</head>
+
+<body>
+    <div class="bg">
+        <div class="title">DIY YOUR HERO<br><input type="text" name="name" value="" placeholder="搜索一下" id="search"></div>
+    </div>
+    <div id="content">
+        <table class="table" border="1">
+            <tr>
+                <th>HeroID</th>
+                <th>HeroName</th>
+                <th>HeroImage</th>
+                <th>SkillQ</th>
+                <th>SkillW</th>
+                <th>SkillE</th>
+                <th>SkillR</th>
+                <th>Position</th>
+            </tr>
+        </table>
+    </div>
+    <div class="button">
+        <a href="editor.html">
+            <img src="images/add.png" alt="" /></a>
+        <a href="list.html">
+            <img src="images/chexiao.png" alt="" onclick="fixLine(event)" /></a>
+        <a href="fix.html">
+            <img src="images/fix.jpg" alt="" onclick="chexiao(event)" /></a>
+        <a href="list.html">
+            <img src="images/delete.png" onclick="deleteLine(event)">
+        </a>
+    </div>
+    <div class="select">
+        <select class="" name="" id="add">
+             <option value="0">请选择要添加的项目</option>
+   </select>
+        <select class="" name="" id="fix">
+          <option value="0">请选择要修改的项目</option>
+   </select>
+        <select class="" name="" id="chexiao">
+          <option value="0">请选择要撤销的项目</option>
+    </select>
+        <select class="" name="" id="delete">
+          <option value="0">请选择要删除的项目</option>
+   </select>
+    </div>
+    <!-- <button type="button" name="button" id="delete"><img src="images/delete.png" onclick="deleteLine(event)"></button> -->
+    <script id="table" type="text/html">
+        <table class="table" border="1">
+            <tr>
+                <th>HeroID</th>
+                <th>HeroName</th>
+                <th>HeroImage</th>
+                <th>SkillQ</th>
+                <th>SkillW</th>
+                <th>SkillE</th>
+                <th>SkillR</th>
+                <th>Position</th>
+            </tr>
+            {{each list as value i}}
+            <tr class="tbody">
+                <td>{{value.HeroID}}</td>
+                <td>{{value.HeroName}}</td>
+                <td>{{value.HeroImage}}</td>
+                <td>{{value.SkillQ}}</td>
+                <td>{{value.SkillW}}</td>
+                <td>{{value.SkillE}}</td>
+                <td>{{value.SkillR}}</td>
+                <td>{{value.Postion}}</td>
+            </tr>
+            {{/each}}
+        </table>
+    </script>
+    <script src="js/pingyin.js" charset="utf-8"></script>
+    <script src="lib/template.js" charset="utf-8"></script>
+    <script src="js/list.js" charset="utf-8"></script>
+    <script>
+    </script>
+</body>
+
+</html>
