@@ -10,7 +10,6 @@ function getcity(cityName) {
         data: {
             cityname: cityName
         },
-
         method: 'get',
         headers: {
             apikey: "5d98670c326056283c20cb53e8b1db46"
@@ -27,7 +26,6 @@ function getcity(cityName) {
         }
     });
 }
-
 function getWeather(cityName, cityID) {
 
     $.ajax({
@@ -43,7 +41,6 @@ function getWeather(cityName, cityID) {
         },
         dataType: 'json',
         success: function(res) {
-
             var tablecurrent = document.querySelector('#listBody');
             var thead = document.querySelector('.thead');
             var table = document.createElement('table');
@@ -73,11 +70,10 @@ function getWeather(cityName, cityID) {
                 }
                 table.appendChild(tobdy1);
             }
-            console.log(thead.innerHTML);
             tablecurrent.innerHTML = '<table class="table table-striped table-bordered">' + '<thead class="thead">'+thead.innerHTML +'</thead>'+ table.innerHTML + '</table>';
-            console.log(tablecurrent.innerHTML);
         },
         error: function(err) {
+
             console.log(err);
         }
     });
