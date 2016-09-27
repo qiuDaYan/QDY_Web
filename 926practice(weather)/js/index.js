@@ -6,7 +6,7 @@ function getcity(cityName) {
 
     $.ajax({
 
-        url: 'http://apis.baidu.com/apistore/weatherservice/cityinfo',
+        url: 'https://apis.baidu.com/apistore/weatherservice/cityinfo',
         data: {
             cityname: cityName
         },
@@ -30,7 +30,7 @@ function getWeather(cityName, cityID) {
 
     $.ajax({
 
-        url: 'http://apis.baidu.com/apistore/weatherservice/recentweathers',
+        url: 'https://apis.baidu.com/apistore/weatherservice/recentweathers',
         data: {
             cityname: cityName,
             cityid: cityID
