@@ -1,7 +1,20 @@
 getcity('北京');
+
 function doSearch() {
-    getcity(document.querySelector('#city').value);
+
+   if(document.querySelector('#city').value == ''){
+     alert('请输入城市');
+   }else{
+     getcity(document.querySelector('#city').value);
+   }
 }
+//
+// getcity(document.querySelector('#city').onkeyup = function(e) {
+//             if (e.keyCode == 13) {
+//                 getcity(document.querySelector('#city').value);
+//             }
+//         };
+
 function getcity(cityName) {
 
     $.ajax({
@@ -16,16 +29,23 @@ function getcity(cityName) {
         },
         dataType: 'json',
         success: function(res) {
-            console.log(res);
-            console.log(res.retData.cityCode);
-            var cityID = res.retData.cityCode;
-            getWeather(cityName, cityID);
+
+            if (res.errNum == 0) {
+                console.log(res);
+                console.log(res.retData.cityCode);
+                var cityID = res.retData.cityCode;
+                getWeather(cityName, cityID);
+            } else {
+                alert("很抱歉您查询的城市暂时没有天气信息");
+                document.querySelector('#city').value = '';
+            }
         },
         error: function(err) {
             console.log(err);
         }
     });
 }
+
 function getWeather(cityName, cityID) {
 
     $.ajax({
@@ -49,28 +69,27 @@ function getWeather(cityName, cityID) {
             var today = res.retData.today;
             for (var i = 0; i < history.length; i++) {
                 var obj = history[i];
-                var tobdy ='';
-                if(i == history.length-1){
-                   tobdy = setTable(obj,'昨天',cityName);
-                }else {
-                   tobdy = setTable(obj,obj.date,cityName);
+                var tobdy = '';
+                if (i == history.length - 1) {
+                    tobdy = setTable(obj, '昨天', cityName);
+                } else {
+                    tobdy = setTable(obj, obj.date, cityName);
                 }
                 table.appendChild(tobdy);
             }
-            var tobdyto = setTable(today,'今天',cityName);
+            var tobdyto = setTable(today, '今天', cityName);
             table.appendChild(tobdyto);
             for (var a = 0; a < forecast.length; a++) {
                 var obj1 = forecast[a];
-                  var tobdy1 = '';
-              if(a == 0)
-                {
-                   tobdy1 = setTable(obj1,'明天',cityName);
-                }else {
-                   tobdy1 = setTable(obj1,obj1.date,cityName);
+                var tobdy1 = '';
+                if (a == 0) {
+                    tobdy1 = setTable(obj1, '明天', cityName);
+                } else {
+                    tobdy1 = setTable(obj1, obj1.date, cityName);
                 }
                 table.appendChild(tobdy1);
             }
-            tablecurrent.innerHTML = '<table class="table table-striped table-bordered">' + '<thead class="thead">'+thead.innerHTML +'</thead>'+ table.innerHTML + '</table>';
+            tablecurrent.innerHTML = '<table class="table table-striped table-bordered">' + '<thead class="thead">' + thead.innerHTML + '</thead>' + table.innerHTML + '</table>';
         },
         error: function(err) {
 
@@ -78,7 +97,8 @@ function getWeather(cityName, cityID) {
         }
     });
 }
-function setTable(obj,dayName,cityName) {
+
+function setTable(obj, dayName, cityName) {
     var tbody = document.createElement('tbody');
     tbody.innerHTML = `<tbody>
   <tr class='success'>
