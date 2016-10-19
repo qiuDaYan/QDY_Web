@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>唐氏当当网</title>
-    <link rel="stylesheet" href="assets/lib/weui/weui.css" media="screen" title="no title">
+    <link rel="stylesheet" href="assets/lib/weui/weui.css" >
     <style>
         html,
         body,
@@ -23,20 +23,20 @@
       </div>
         <div class="page__bd">
             <div class="weui-tabbar" >
-                <a href="#/" ng-click='linkTo(0)' class="weui-tabbar__item {{selectedIndex==0?'weui-bar__item_on':'weui-tabbar__item'}}">
-                    <img src="./assets/images/icon_nav_search_bar.png" alt="" class="weui-tabbar__icon">
+                <a href="#/" ng-click='linkTo(0)' class="weui-tabbar__item {{selectedIndex==0 ? 'weui-bar__item_on' : '' }}">
+                    <img src="./assets/images/zhuye.png" alt="" class="weui-tabbar__icon">
                     <p class="weui-tabbar__label">首页</p>
                 </a>
-                <a href="#/blog" ng-click='linkTo(1)' class="weui-tabbar__item {{selectedIndex==1? 'weui-tabbar__item_on':'weui-tabbar__item'}}">
-                    <img src="./assets/images/icon_nav_panel.png" alt="" class="weui-tabbar__icon">
+                <a href="#/blog" ng-click='linkTo(1)' class="weui-tabbar__item {{selectedIndex==1 ? 'weui-bar__item_on' : ''}}">
+                    <img src="./assets/images/blog.png" alt="" class="weui-tabbar__icon">
                     <p class="weui-tabbar__label">我的blog</p>
                 </a>
-                <a href="#/book" ng-click='linkTo(2)' class="weui-tabbar__item {{selectedIndex==2?'weui-tabbar__item_on':'weui-tabbar__item'}}">
-                    <img src="./assets/images/icon_nav_icons.png" alt="" class="weui-tabbar__icon">
+                <a href="#/book" ng-click='linkTo(2)' class="weui-tabbar__item {{selectedIndex==2 ? 'weui-bar__item_on' : ''}}">
+                    <img src="./assets/images/zuopin.jpg" alt="" class="weui-tabbar__icon">
                     <p class="weui-tabbar__label">当当热销</p>
                 </a>
-                <a href="#/about_me" ng-click='linkTo(3)' class="weui-tabbar__item {{selectedIndex==3?'weui-tabbar__item_on':'weui-tabbar__item'}}">
-                    <img src="./assets/images/icon_nav_actionSheet.png" alt="" class="weui-tabbar__icon">
+                <a href="#/about_me" ng-click='linkTo(3)' class="weui-tabbar__item {{selectedIndex==3 ? 'weui-bar__item_on' : ''}}">
+                    <img src="./assets/images/guanyuwo.png" alt="" class="weui-tabbar__icon">
                     <p class="weui-tabbar__label">联系我</p>
                 </a>
             </div>
