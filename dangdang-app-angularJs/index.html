@@ -17,13 +17,12 @@
 </head>
 
 <body>
-    <div ng-app='app' ng-controller='mainController'>
+    <div ng-app='app'>
         <div class="page__bd">
             <div ng-view>
               <!-- 这里是模板 -->
             </div>
-
-            <div class="weui-tabbar" ng-controller="footerCtrl">
+            <div class="weui-tabbar" ng-controller="mainController">
                 <a href="#/" onclick='linkTo(0)' class="weui-tabbar__item weui-bar__item_on {{selectedIndex==0 ? 'weui-bar__item_on':'weui-tabbar__item'}}">
                     <img src="./assets/images/icon_nav_search_bar.png" alt="" class="weui-tabbar__icon">
                     <p class="weui-tabbar__label">首页</p>
