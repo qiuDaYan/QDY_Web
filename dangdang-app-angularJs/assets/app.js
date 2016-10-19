@@ -4,19 +4,19 @@ var app = angular.module('app',['ngRoute']);
 app.config(['$routeProvider', function($routeProvider) {
     $routeProvider
         .when('/', {
-          templateUrl:'/dangdang-app-angularJs/assets/tpl/index.html',
+          templateUrl:'/QDY_Web/dangdang-app-angularJs/assets/tpl/index.html',
           controller:'listCtrl'
         })
         .when('/blog',{
-          templateUrl:'/dangdang-app-angularJs/assets/tpl/blog.html',
+          templateUrl:'/QDY_Web/dangdang-app-angularJs/assets/tpl/blog.html',
           controller:''
         })
         .when('/book',{
-          templateUrl:'/dangdang-app-angularJs/assets/tpl/book.html',
+          templateUrl:'/QDY_Web/dangdang-app-angularJs/assets/tpl/book.html',
           controller:'bookController'
         })
         .when('/about_me',{
-          templateUrl:'/dangdang-app-angularJs/assets/tpl/about_me.html',
+          templateUrl:'/QDY_Web/dangdang-app-angularJs/assets/tpl/about_me.html',
           controller:''
         })
         .otherwise({
