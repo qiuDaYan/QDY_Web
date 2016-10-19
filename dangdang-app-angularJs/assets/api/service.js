@@ -1,4 +1,4 @@
-app.factory('commonService', [$http, function($http) {
+app.factory('commonService', ['$http', function($http) {
     var service = {};
     // 根据分类信息取数据
     service.getData = function(type, callBack) {
