@@ -1,7 +1,7 @@
 <div class="weui-cells">
     <a class="weui-cell weui-cell_access" href="javascript:;" ng-repeat='item in bookTypes'>
         <div class="weui-cell__hd">
-            <img src="" style="width:20px;margin-right:5px;display:block">
+            <img ng-src="{{item.imgurl}}" style="width:20px;margin-right:5px;display:block">
         </div>
         <div class="weui-cell__bd">
             <p>{{item.name}}</p>
