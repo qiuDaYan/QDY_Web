@@ -5,7 +5,7 @@ app.config(['$routeProvider', function($routeProvider) {
     $routeProvider
         .when('/', {
           templateUrl:'./assets/tpl/index.html',
-          controller:'listCtrl'
+          controller:''
         })
         .when('/blog',{
           templateUrl:'./assets/tpl/blog.html',

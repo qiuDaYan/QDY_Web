@@ -1,4 +1,4 @@
-app.controller('bookController',['$scope',function($scope){
+app.controller('bookController',['$scope',function($scope,bookController){
   $scope.bookTypes = [
     {id:'art',name:'艺术',imgurl:'http://img0.imgtn.bdimg.com/it/u=1877885148,372723708&fm=21&gp=0.jpg',describtion:'开启你的艺术之路'},
     {id:'guji',name:'古书',imgurl:'http://img0.imgtn.bdimg.com/it/u=2528215503,3232759633&fm=21&gp=0.jpg',describtion:'品古书 养身心'},
