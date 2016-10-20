@@ -1,0 +1,23 @@
+
+
+<a href="/list" style="float:right; font-size:25px; color:black;">返回</a>
+<div class="weui_panel weui_panel_access" style="background-color:black;" ng-repeat='item in bookData'>
+    <div class="weui_panel_bd" style="background-color:#fff">
+        <a href="{{item.href}}" class="weui_media_box weui_media_appmsg">
+            <div class="weui_media_hd" style="line-height:170px; width:130px; height:170px;">
+                <img class="weui_media_appmsg_thumb" src="{{item.imgurl}}" alt="" style="width:130px; height:170px;">
+            </div>
+            <div class="weui_media_bd">
+                <h2 class="weui_media_title" style="font-size:20px; " title="{{item.name}}">{{item.name}}</h2>
+                <p class="weui_media_desc" style="font-size:16px; color:blue">{{item.author}}</p>
+                <p class="weui_media_desc"><span style='color:black'>{{item.time}}</span> <span style="color:blue">{{item.chubanshe}}</span></p>
+                <p class="weui_media_desc"><span style="color:red">{{item.price_n}}</span>
+                    <span style="text-decoration:line-through; color:#666666">   {{item.price_r}}    </span>
+                    <span style="color:red">({{item.prices}})</span></p>
+            </div>
+        </a>
+        <a href="javascript:;" class="weui_btn weui_btn_mini weui_btn_warn" id='show-toast-text' ; style="left:150px; top:-60px;">加入购物车</a>
+        <a href="https://mpassport.dangdang.com/login.php?burl=http%3A%2F%2Fproduct.m.dangdang.com%2F24028628.html%3Fsid%3D6b263bdb1cb6c9048293ef35e7b7b13f%26callback_action%3Dadd_wishlist&sid=6b263bdb1cb6c9048293ef35e7b7b13f" style="left:180px; top:-60px;" class="weui_btn weui_btn_mini weui_btn_primary">收藏</a>
+    </div>
+    <a class="weui_panel_ft" href="javascript:void(0);">查看更多</a>
+</div>
