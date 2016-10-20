@@ -20,7 +20,7 @@ app.config(['$routeProvider', function($routeProvider) {
           controller:''
         })
         .when('/book_detail/:id', {
-        templateUrl:'../tpl/book_detail.html',
+        templateUrl:'./assets/tpl/book_detail',
         controller:'booklistCtrl'
       })
         .otherwise({
